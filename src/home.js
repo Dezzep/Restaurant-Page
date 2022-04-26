@@ -13,13 +13,27 @@ const componentHome= () => {
 
   element.appendChild(header);
   element.appendChild(para);
-  element.className = "intro-msg";
+  element.className = "intro-msg right-side";
+  
+
  
   return idSelect.appendChild(element)
 };
 
+const componentHomeHide = (bool) => {
+  const el = document.getElementsByClassName('intro-msg')
+  if (bool === true){
+  for (let i = 0; i < el.length; i++){
+    el[i].style.display = 'none';
+    }
+  };
+  if (bool === false){
+    for (let i = 0; i < el.length; i++){
+      el[i].style.display = '';
+    }
+  };
+}
 
 
 
-
-export {componentHome};
+export {componentHome, componentHomeHide};

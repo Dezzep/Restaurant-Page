@@ -1,10 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+
+
 $bg-color: #46666D;
 $text-color: #FD8F3B;
 
+body{
+  height: 100vh;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+
 #content {
   color: $text-color;
+  display:grid;
+  grid-template-columns: 2fr 2.5fr;
+  grid-template-areas: 
+  '. header'
+  '. rightside';
+}
+
+.right-side{
+  grid-area: rightside
+
+}
+
+.header{
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  margin-bottom: .5rem;
+  grid-area: header;
+  
+  // will likely need media queries for this part.
+  // might be better to move margintop to content.
+  margin-top:10em;
+
+
+  ul{
+    
+    list-style-type: none;
+    font-weight: bold;
+  
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+    li{
+      padding-left:.5rem;
+      padding-right:.5rem;
+      padding-top:.2rem;
+      padding-bottom: .2rem;
+      &:hover{
+        background-color: $bg-color;
+        cursor: pointer;
+      }
+    }
+    }
+
 }
 
 .intro-msg{
   background-color: $bg-color;
 }
+
