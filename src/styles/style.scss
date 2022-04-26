@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,500&display=swap');
 
 
-
-$bg-color: #46666D;
-$text-color: #FD8F3B;
+$layout-breakpoint-small: 960px;
+$accent-color: #E6F4F1;
+$highlight-color: #A64955;
+$text-color: #82A1B4;
+$bg-color: #E6F4F1;
+$dark-text: #303B39;
 
 body{
   height: 100vh;
+  background-image: linear-gradient(to left top, #0d3674, #245186, #3f6c96, #5f86a5, #82a1b4);
 }
+
 
 *{
   margin:0;
   padding:0;
 }
 
-
 #content {
   color: $text-color;
   display:grid;
   grid-template-columns: 2fr 2.5fr;
+  gap:2rem;
   grid-template-areas: 
-  '. header'
-  '. rightside';
+  '.  header'
+  '.  rightside';
+  background-image: url(/src/photos/restaurant-jason-leung-poI7DelFiVA-unsplash.jpg);
+    height:50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  
 }
 
 .right-side{
@@ -34,12 +45,12 @@ body{
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-  margin-bottom: .5rem;
+  margin-bottom: .3rem;
   grid-area: header;
-  
+  font-size:1.5em;
+  padding-top:20%;
   // will likely need media queries for this part.
   // might be better to move margintop to content.
-  margin-top:10em;
 
 
   ul{
@@ -51,6 +62,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: $accent-color;
     
     
     li{
@@ -59,7 +71,7 @@ body{
       padding-top:.2rem;
       padding-bottom: .2rem;
       &:hover{
-        background-color: $bg-color;
+        background-color: $highlight-color;
         cursor: pointer;
       }
     }
@@ -71,3 +83,16 @@ body{
   background-color: $bg-color;
 }
 
+.menu-options{
+  color: $dark-text;
+  padding:1em;
+  background-color: rgba($bg-color,0.8);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  
+  @media (max-width: $layout-breakpoint-small) {
+    grid-template-columns: 1fr;
+  }
+}
