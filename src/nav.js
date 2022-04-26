@@ -1,6 +1,9 @@
 import {componentHomeHide} from './home';
+import {componentMenuHide} from './menu';
+import { componentAboutHide } from './about';
 const parent = document.getElementById('content');
-const body = document.getElementsByTagName('body');
+
+
 
 //have everything default to hidden here except for nav1?
 
@@ -9,12 +12,12 @@ const body = document.getElementsByTagName('body');
 const nav1 = "Home";
 const nav2 = "Menu";
 const nav3 = "About";
-const nav4 = "Contact Us";
+
 
 const componentHeader= () => {
   const element = document.createElement('div');
   const ul = document.createElement('ul');
-  const navOptions = [nav1, nav2, nav3, nav4];
+  const navOptions = [nav1, nav2, nav3];
   element.appendChild(ul);
   element.className = "header";
 
@@ -42,11 +45,20 @@ const navClicked = () => {
       else{
         componentHomeHide(true);
       }
-
       //for --> NAV2
-
+      if(items[i].innerText === nav2){
+        componentMenuHide(false);
+      }
+      else{
+        componentMenuHide(true);
+      }
       //for --> NAV3
-
+      if(items[i].innerText === nav3){
+        componentAboutHide(false);
+      }
+      else{
+        componentAboutHide(true);
+      }
       //for --> NAV4
     });
     

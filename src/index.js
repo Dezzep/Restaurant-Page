@@ -1,13 +1,21 @@
 import {initNav} from './nav';
 import {componentHome} from './home';
-import {componentMenu} from './menu';
+import {componentMenu, componentMenuHide} from './menu';
+import {componentAbout, componentAboutHide} from './about';
 import "./styles/style.scss";
 
-componentMenu();
 initNav(); // adds nav bar + event listeners related to nav bar.
            //such as hideAllElementsExceptClicked
 
-           // componentHome();
+
+componentHome(); 
+componentMenu();
+componentMenuHide(true); //loads elements onto page but has them hidden
+componentAbout();
+componentAboutHide(true);
+
+
+
 
 //will be beneficial to generate everything in advance 
 // and then hide using initNav I think.

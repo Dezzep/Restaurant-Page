@@ -4,12 +4,12 @@ const componentHome= () => {
   const header = document.createElement('h2');
   const para = document.createElement('p');
   
-  header.textContent = "Welcome Socks";
-  para.textContent = `Blick blocks??? That's what we eat here. Blocks and clocks and 
-  other stocks such as hawks but the hawks were paid to be here
-  blokcckckckckck blickckckckckck stick and flicks? well anyways we eat sticks if you dont eat sticks but 
-  like menus you can eat the menu if not you can read menu with word with eyes?
-  Thankyou we are block blick sticks! We lick! `;
+  header.textContent = "Real Food For Real Humans";
+  para.textContent = `Birds eat nice food now humans can eat nice food
+  from us birds! We don't cook birDs squak - we are birds but we are good cooks! We
+  all watched Ratatouille! Anyone can cook even birds! We make good food fast good! SQuak 
+  real nice edible fast and good with real stuff for good nutrition and cheap stuff for good money savings sQUAAK 
+  birds are cool come and talk to us about real food! Maybe eat too?`;
 
   element.appendChild(header);
   element.appendChild(para);

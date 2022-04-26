@@ -4,9 +4,8 @@ const id = document.getElementById('content');
 //Array Layout for menuItem = [Header, para, para, para..]
 const menuItem1 = 
 ['Rock Soup', 
-"Broccoli and rock made with care by chef Soup Bird (He likes rocks)", 
+"Broccoli and rock made with care by head chef Soup Bird Man", 
 '6$',
-'Add Rock for only 36$',
 ]
 const menuItem2 = 
 ['bllooop?',
@@ -31,7 +30,7 @@ const menuItem5 = [
 const menuItem6 = [
   'Very Serious Food',
   "For those who are serious about taste and love food or maybe you're on a date?",
-  "199.99$ -- serves 2",
+  "199.99$ -- Serves 2",
 ]
 
 
@@ -44,7 +43,6 @@ div.className = 'menu-options right-side';
   for (let i = 0; i < menuOptions.length; i++){ 
     let innerDiv = document.createElement('div');
     innerDiv.id = `menu-item${i}`; // created a ID for each menuItem
-    console.log(menuOptions.length);
     for(let j = 0; j < menuOptions[i].length; j++){
       
       
@@ -57,6 +55,10 @@ div.className = 'menu-options right-side';
       else{
        let para = document.createElement('p');
        para.textContent = menuOptions[i][j];
+       
+       if(j === 2){
+         para.style.color = 'red';
+       }
        innerDiv.appendChild(para);
       }
     
@@ -67,7 +69,7 @@ div.className = 'menu-options right-side';
 };
 
 const componentMenuHide = (bool) => {
-  const el = document.getElementsByClassName('intro-msg')
+  const el = document.getElementsByClassName('menu-options')
   if (bool === true){
   for (let i = 0; i < el.length; i++){
     el[i].style.display = 'none';

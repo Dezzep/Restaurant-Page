@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,500&display=swap');
 
-
+$layout-breakpoint-xsmall:500px;
 $layout-breakpoint-small: 960px;
 $accent-color: #E6F4F1;
 $highlight-color: #A64955;
@@ -20,6 +20,7 @@ body{
 }
 
 #content {
+  font-family:'Roboto','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: $text-color;
   display:grid;
   grid-template-columns: 2fr 2.5fr;
@@ -32,6 +33,12 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size:cover;
+
+  @media (max-width: $layout-breakpoint-small) {
+    grid-template-columns: 1fr 5fr;
+
+    
+  }
   
 }
 
@@ -49,10 +56,12 @@ body{
   grid-area: header;
   font-size:1.5em;
   padding-top:20%;
-  // will likely need media queries for this part.
-  // might be better to move margintop to content.
+  @media (max-width: $layout-breakpoint-xsmall) {
+      font-size:1em;
+  
 
-
+  }
+ 
   ul{
     
     list-style-type: none;
@@ -63,6 +72,7 @@ body{
     justify-content: space-around;
     align-items: center;
     background-color: $accent-color;
+  
     
     
     li{
@@ -70,6 +80,8 @@ body{
       padding-right:.5rem;
       padding-top:.2rem;
       padding-bottom: .2rem;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight:800;
       &:hover{
         background-color: $highlight-color;
         cursor: pointer;
@@ -80,7 +92,18 @@ body{
 }
 
 .intro-msg{
-  background-color: $bg-color;
+  background-color: rgba($bg-color,0.8);
+  color: $dark-text;
+
+  display:flex;
+  flex-direction:column;
+  gap:1em;
+  padding:1.5em;
+  font-size:1.3em;
+
+  h2{
+    background-color: $highlight-color;
+  }
 }
 
 .menu-options{
@@ -89,10 +112,39 @@ body{
   background-color: rgba($bg-color,0.8);
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
+  gap: 1.3rem;
   font-size: clamp(1rem, 4vw, 1.2rem);
+
+  h3{
+    background-color: $highlight-color;
+    margin-bottom:.5rem;
+    padding-left:1rem;
+    @media (max-width: $layout-breakpoint-small) {
+      padding-left:4rem;
+      
+    }
+  }
+  p{
+    margin-left:.4rem;
+  }
   
   @media (max-width: $layout-breakpoint-small) {
     grid-template-columns: 1fr;
+    
+  }
+}
+
+.about-section{
+  color: $dark-text;
+  background-color: rgba($bg-color,0.8);
+
+  .link{
+    color: blue;
+    
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+      color: rgba(blue,0.8)
+    }
   }
 }
