@@ -1,10 +1,10 @@
 const componentMenu= () => {
 const id = document.getElementById('content');
-
+const color = '#A64955';
 //Array Layout for menuItem = [Header, para, para, para..]
 const menuItem1 = 
 ['Rock Soup', 
-"Broccoli and rock made with care by head chef Soup Bird Man", 
+"Broccoli and rock made with care by head chef Soup Bird Man. Some birds eat it some don't", 
 '6$',
 ]
 const menuItem2 = 
@@ -14,7 +14,7 @@ const menuItem2 =
 ]
 const menuItem3 = [
   'Blocks Socks',
-  'Delicious Block Socks made with real flick flock shoe socks!',
+  'Delicious Block Socks made with real flick flock shoe socks! For those who hate shoes but like socks',
   '17.99$',
 ]
 const menuItem4 = [
@@ -57,7 +57,7 @@ div.className = 'menu-options right-side';
        para.textContent = menuOptions[i][j];
        
        if(j === 2){
-         para.style.color = 'red';
+         para.style.color = color;
        }
        innerDiv.appendChild(para);
       }

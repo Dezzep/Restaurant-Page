@@ -144,9 +144,16 @@ body{
     }
   }
   p{
+    
     margin-left:.4rem;
+    justify-content: space-between;
+   
+    &:nth-last-child(1){
+      justify-self: flex-end;
+      align-self: flex-end;
+    }
   }
-  
+ 
   @media (max-width: $layout-breakpoint-small) {
     grid-template-columns: 1fr;
     
@@ -181,6 +188,8 @@ body{
     align-items: center;
     gap: 10px;
     padding-left:.4em;
+    padding:1rem;
+    
   }
   #about1{
     grid-area: imgsrc;
@@ -189,11 +198,14 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding:1rem;
     
   }
   #about2{
     
     grid-area: location;
+    border-bottom: 3px $highlight-color solid;
+    padding-bottom:10px;
 
     h3{
       background-color: $highlight-color;
@@ -203,5 +215,7 @@ body{
   }
   #about3{
     grid-area: project;
+    border-top: 3px $highlight-color solid;
+    padding-top: 10px;
   }
 }
