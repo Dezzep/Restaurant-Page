@@ -26,6 +26,7 @@ body{
   grid-template-columns: 2fr 2.5fr;
   gap:2rem;
   grid-template-areas: 
+  '.  logo'
   '.  header'
   '.  rightside';
   background-image: url(/src/photos/restaurant-jason-leung-poI7DelFiVA-unsplash.jpg);
@@ -36,9 +37,23 @@ body{
 
   @media (max-width: $layout-breakpoint-small) {
     grid-template-columns: 1fr 5fr;
-
+    gap:1rem;
+    .header{
+      margin-top: -1rem;
     
+    }
+  
   }
+ #logo{
+   grid-area: logo;
+   margin: 1em;
+   margin-bottom: -1em;
+   color: $highlight-color;
+   font-size: 1.6rem;
+   background-size: contain;
+   background-color: rgba(black,0.6);
+   padding-left:2rem;
+ } 
   
 }
 
@@ -57,13 +72,14 @@ body{
   font-size:1.5em;
   padding-top:20%;
   @media (max-width: $layout-breakpoint-xsmall) {
-      font-size:1em;
+      font-size:1.3em;
+  
   
 
   }
  
   ul{
-    
+    margin-right:1em;
     list-style-type: none;
     font-weight: bold;
   
@@ -100,9 +116,12 @@ body{
   gap:1em;
   padding:1.5em;
   font-size:1.3em;
+  max-width: 80ch;
+
 
   h2{
     background-color: $highlight-color;
+    padding-left:2rem;
   }
 }
 
@@ -137,14 +156,52 @@ body{
 .about-section{
   color: $dark-text;
   background-color: rgba($bg-color,0.8);
-
-  .link{
-    color: blue;
+  padding:2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+  font-size:1.3em;
+  grid-template-areas: 
+  "location location"
+  "dezzep imgsrc"
+  "project project";
+  a{
+    font-size:1.2rem;
     
     &:hover{
-      text-decoration: underline;
       cursor: pointer;
       color: rgba(blue,0.8)
     }
+  }
+  #about0{
+    grid-area: dezzep;
+    background-color:rgba($highlight-color, 0.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left:.4em;
+  }
+  #about1{
+    grid-area: imgsrc;
+    background-color: rgba($highlight-color, 0.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+  }
+  #about2{
+    
+    grid-area: location;
+
+    h3{
+      background-color: $highlight-color;
+      margin-bottom: 1em;
+      padding-left: .6em;
+    }
+  }
+  #about3{
+    grid-area: project;
   }
 }

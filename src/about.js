@@ -14,12 +14,16 @@ const componentAbout= () => {
     'Jason Leung'
   ]
   const about3 = [
-    'is it working',
-    'lets find out',
+    'We have thousands of locations in pretty much any tree',
+    'Right before the sunrise you can hear us cooking! Come for breakfast by slowly approaching us, you must bring bread.',
+    'We are looking forward to your bread and we will for sure make you food after you give us all of your bread. Even though bread is bad for us we need bread right now see you soon!'
+  ]
+  const about4 =[
+    'This project was created strictly using JavaScript and css.'
   ]
   
   const links = [dezzepLink, pictureLink];
-  const aboutElements = [about1, about2, about3];
+  const aboutElements = [about1, about2, about3, about4];
   const div = document.createElement('div');
   div.className = 'about-section right-side';
   

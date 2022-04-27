@@ -1,5 +1,5 @@
 import {initNav} from './nav';
-import {componentHome} from './home';
+import {componentHome,} from './home';
 import {componentMenu, componentMenuHide} from './menu';
 import {componentAbout, componentAboutHide} from './about';
 import "./styles/style.scss";
