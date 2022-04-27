@@ -172,6 +172,14 @@ body{
   "location location"
   "dezzep imgsrc"
   "project project";
+
+  @media (max-width: $layout-breakpoint-small) {
+    grid-template-areas:
+    "location location"
+    "dezzep dezzep"
+    "imgsrc imgsrc"
+    "project project";
+  }
   a{
     font-size:1.2rem;
     
